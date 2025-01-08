@@ -1,4 +1,5 @@
 🎙️ Podcast Website
+
 Welcome to the Podcast Website project! This repository contains the code for a responsive and interactive website designed for hosting and showcasing podcasts. Built using HTML, CSS, and JavaScript, it provides a seamless experience for podcast enthusiasts.
 
 📋 Features
@@ -23,7 +24,7 @@ JavaScript: For dynamic interactivity, such as media controls and animations.
 Clone the Repository
 bash
 Copy code
-git clone 
+git clone https://github.com/euii-ii/podcast.git
 Navigate to the Directory
 
 bash
