@@ -1,0 +1,159 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+#content_container {
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    perspective: 1000px;
+}
+
+#form_container {
+    width: 100%;
+    min-height: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+#form_container:hover {
+    transform: translateY(-5px);
+}
+
+#form_header_container {
+    width: 100%;
+    padding: 30px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+#form_header {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+#form_content_container {
+    padding: 40px 30px;
+}
+
+#form_content_inner_container {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+    padding: 0 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#button_container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#button_container button {
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+#button_container button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Add animation for form appearance */
+@keyframes formAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#form_container {
+    animation: formAppear 0.5s ease forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    #content_container {
+        width: 90%;
+    }
+
+    #form_header {
+        font-size: 20px;
+    }
+
+    input {
+        height: 45px;
+    }
+
+    #button_container button {
+        height: 45px;
+        font-size: 14px;
+    }
+}
+
+/* Add subtle hover effects for inputs */
+input:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Add focus effect for the entire form container */
+#form_container:focus-within {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}

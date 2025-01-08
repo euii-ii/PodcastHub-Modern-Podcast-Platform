@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Podcasttttt</title>
+  <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Genre Page</title>
+
+    <style>
+        :root {
+    --primary-color: #2a0e61;
+    --card-color: #ffffff;
+    --hover-color: #3498db;
+    --text-color: #ffffff;
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    --transition-speed: 0.3s;
+}
+
+body {
+    background: linear-gradient(135deg, #1e0044 0%, #2a0e61 100%);
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    color: var(--text-color);
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin: 40px 0;
+    color: var(--text-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.genre-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-speed) ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.genre-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.genre-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+    opacity: 0;
+    transition: opacity var(--transition-speed);
+}
+
+.genre-card:hover::before {
+    opacity: 1;
+}
+
+.genre-card h2 {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin: 0;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transition-speed);
+}
+
+.genre-card:hover h2 {
+    transform: scale(1.1);
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    border-radius: 50px;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color var(--transition-speed);
+}
+
+.nav-links a:hover {
+    color: var(--hover-color);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar {
+        position: static;
+        margin: 20px;
+        border-radius: 15px;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- <header class="active" data-header>
+        <div class="container">
+          <div class="overlay" data-overlay></div>
+          <a href="#" class="logo">
+            <img src="./assets/images/logo.svg" alt="Micro logo">
+          </a> -->
+    
+
+    <h1>Explore Your Favorite Genre</h1>
+    <main>
+        <div class="navbar">
+            <ul class="nav-links" style="list-style: none; display: flex; padding: 0;">
+                <li style="margin-right: 20px;"><a href="podcast.html" style="text-decoration: none; color: #fff;">Home</a></li>
+                <li style="margin-right: 20px;"><a href="browser.html" style="text-decoration: none; color: #fff;">Browse</a></li>
+                
+          
+              </ul>
+        </div>
+            
+    
+            <!-- Add more links as needed -->
+        </div>
+        <div class="genre-card" onclick="openGenre('geo-political')" ;">
+            <h2>Geo-Political</h2>
+
+        </div>
+
+        <div class="genre-card" onclick="openGenre('mythological')">
+            <h2>Mythological</h2>
+            
+        </div>
+
+        <div class="genre-card" onclick="openGenre('horror')">
+            <h2>Horror</h2>
+            
+        </div>
+
+        <div class="genre-card" onclick="openGenre('socialmedia')">
+            <h2>Social Media</h2>
+            
+        </div>
+
+        <div class="genre-card" onclick="openGenre('sport')">
+            <h2>Sports</h2>
+           
+        </div>
+
+        <div class="genre-card" onclick="openGenre('astronomy')">
+            <h2>Astronomy</h2>
+           
+        </div>
+
+        <!-- Add more genre cards as needed -->
+    </main>
+
+    <script>
+        // Function to open a genre page
+        // function openGenre(genreName) {
+        //     // You can redirect the user to the genre-specific page or perform other actions.
+        //     // For now, we'll just display an alert.
+        //     alert(`Explore ${genreName}`);
+        // }
+        function openGenre(genreName) {
+    // Redirect to the respective genre page
+    window.location.href = `${genreName.toLowerCase()}.html`;
+       }
+
+    </script>
+</body>
+</html>
